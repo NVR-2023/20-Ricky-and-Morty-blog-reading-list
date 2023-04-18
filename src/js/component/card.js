@@ -24,7 +24,7 @@ export const Card = ({subject}) => {
             <button 
               className="btn btn-outline-dark"
               onClick={ () => actions.toggleFavourite(subject.name)}
-              >+
+              >+/-
             </button>
           </span>
       </div>
