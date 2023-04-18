@@ -1,26 +1,45 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
-	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+export const Single = () => {
+  const { store, actions } = useContext(Context);
+  const { id } = useParams();
+  const [singleCharacter, setSingleCharacter] = useState([]); // use state to store the fetched character data
 
-			<hr className="my-4" />
+  const fetchCharacter = async (url) => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setSingleCharacter(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
-		</div>
-	);
-};
+  useEffect(() => {
+    fetchCharacter(`https://rickandmortyapi.com/api/character/${id}`);
+  }, [id]);
 
-Single.propTypes = {
-	match: PropTypes.object
+  return (
+    <div>
+      {singleCharacter ? (
+        <div>
+          <h1 className="display">{singleCharacter.name}</h1>
+          <img src={singleCharacter.image} alt={singleCharacter.name} />
+          {
+            Object.keys(singleCharacter).map(key => {
+              if (typeof singleCharacter[key] === "string") {
+                return <p key={key}>{singleCharacter[key]}</p>;
+              } else {
+                return null;
+              }
+            })
+          }
+        </div>
+      ) : (
+        <p>Loading character...</p>
+      )}
+    </div>
+  );
 };

@@ -1,35 +1,30 @@
 import React, { useContext } from "react";
 import {Context} from "../store/appContext";
+import { useNavigate } from "react-router";
 
-export const Card = ({character}) => {
+export const Card = ({subject}) => {
+  const navigate = useNavigate();
 
   const { store , actions } = useContext(Context);
   
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={character.image} className="card-img-top" alt="..." />
+      <img src={subject.image} className="card-img-top" alt="..." />
       <div className="card-body">
-        <h5 className="card-title">{character.name}</h5>
-        <p className="card-text">
-          Status: {character.status}
-        </p>
-        <p className="card-text">
-          Species: {character.species}
-        </p>
-        <p className="card-text">
-          Gender: {character.gender}
-        </p>
-        <p className="card-text">
-          Origin: {character.origin.name}
-        </p>
+        <h5 className="card-title">{subject.name}</h5>
+        <div>
+           {subject.species} / {subject.gender}
+        </div>
         <span>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+            <button 
+            onClick={() => navigate(`/single/${subject.id}`)}
+            className="btn btn-success">
+              Learn more
+            </button>
             <button 
               className="btn btn-outline-dark"
-              onClick={ () => actions.addFavourite(character.id-1)}
-              >Add to favorites
+              onClick={ () => actions.toggleFavourite(subject.name)}
+              >+
             </button>
           </span>
       </div>
