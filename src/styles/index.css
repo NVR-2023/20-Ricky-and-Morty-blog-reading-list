@@ -9,8 +9,9 @@ body {
 
 .navbarTop {
     border-radius: .5rem;
-    background:rgb(79, 79, 79)
+    background:rgb(175, 175, 175) !important;
 }
+
 .title {
     font-size: 1.8rem;
     font-variant: small-caps;
@@ -20,6 +21,7 @@ body {
 }
 
 .characterCard {
+    border: none;
     box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.2);
 }
 
@@ -29,6 +31,11 @@ body {
 }
 
 .favouritesButton {
-    MARGIN-LEFT: .5rem;
-    background:rgb(202, 198, 114)
+    margin-left: .5rem;
+    background:rgb(243, 233, 31)
+}
+
+.navbarFavouritesButton {
+    background:rgb(243, 233, 31);
+    color:rgb(56, 56, 56)
 }

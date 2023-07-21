@@ -11,7 +11,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3 navbarTop">
 			<div className="mx-3 px-1 title">ricky & morty reading list</div>
 			<div className="dropdown">
-				<button className="btn btn-secondary dropdown-toggle me-3 " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				<button className="btn btn-secondary dropdown-toggle me-3 navbarFavouritesButton" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
 				Favourites
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
