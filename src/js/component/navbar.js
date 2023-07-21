@@ -8,10 +8,10 @@ export const Navbar = () => {
 	const [ favouritesList , setFavouritesList ] = useState(store.favourites);
  
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<div className="mx-3">Ricky & Morty</div>
+		<nav className="navbar navbar-light bg-light mb-3 navbarTop">
+			<div className="mx-3 px-1 title">ricky & morty reading list</div>
 			<div className="dropdown">
-				<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				<button className="btn btn-secondary dropdown-toggle me-3 " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
 				Favourites
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">

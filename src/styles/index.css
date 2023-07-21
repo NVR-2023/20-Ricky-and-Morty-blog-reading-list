@@ -1,3 +1,34 @@
 /* 
     General Styles
 */
+body {
+    padding-inline: 3rem;
+    background: rgb(193, 193, 193);
+
+}
+
+.navbarTop {
+    border-radius: .5rem;
+    background:rgb(79, 79, 79)
+}
+.title {
+    font-size: 1.8rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: rgb(85, 85, 85);
+}
+
+.characterCard {
+    box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody{
+    
+    background:rgb(176, 176, 176)
+}
+
+.favouritesButton {
+    MARGIN-LEFT: .5rem;
+    background:rgb(202, 198, 114)
+}

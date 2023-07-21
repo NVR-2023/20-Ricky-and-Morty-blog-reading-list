@@ -8,9 +8,9 @@ export const Card = ({subject}) => {
   const { store , actions } = useContext(Context);
   
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card characterCard" style={{ width: "18rem" }} >
       <img src={subject.image} className="card-img-top" alt="..." />
-      <div className="card-body">
+      <div className="card-body cardBody">
         <h5 className="card-title">{subject.name}</h5>
         <div>
            {subject.species} / {subject.gender}
@@ -22,9 +22,9 @@ export const Card = ({subject}) => {
               Learn more
             </button>
             <button 
-              className="btn btn-outline-dark"
+              className="btn btn-outline-dark favouritesButton"
               onClick={ () => actions.toggleFavourite(subject.name)}
-              >+/-
+              >Add / Remove
             </button>
           </span>
       </div>
