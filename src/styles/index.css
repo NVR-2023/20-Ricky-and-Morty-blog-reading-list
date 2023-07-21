@@ -44,3 +44,7 @@ body {
     background: rgb(149, 149, 149, .5);
 }
 
+.characterKey {
+    font-weight: 600;
+    text-transform: capitalize;
+}
