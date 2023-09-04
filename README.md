@@ -1,3 +1,15 @@
+***************************************************************************************************************
+Exercise #20: Rick and Morty Blog reading list. Uses Bootstrap, React and an external API. Retrieves and displays data, and implements a favorites feature.
+
+
+By Nuno Rodrigues 
+
+Mark received:
+Date: 
+Teacher:
+***************************************************************************************************************
+
+
 # WebApp boilerplate with React JS
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
